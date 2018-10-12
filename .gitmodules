@@ -1,0 +1,3 @@
+[submodule "profile-go-microservice"]
+	path = profile-go-microservice
+	url = https://github.com/landmarkhw/profile-go-microservice.git

@@ -30,7 +30,7 @@ services:
         - "8080:80"
 
   goapp:
-    build: ./src/go
+    build: ./profile-go-microservice
     container_name: goapp-profiling
     expose: 
         - "5000"
