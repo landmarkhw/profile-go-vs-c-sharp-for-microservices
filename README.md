@@ -9,8 +9,8 @@
         * Insert some default data
     * Download and run pgadmin at http://localhost:8080
         * You can connect using `profile-postgres` as the hostname, `profiler` as the username, `profile-test` as the password.
-    * Run the go app at http://localhost:5000
-    * Run the C# app at http://localhost:5001
+    * Run the `go` app at http://localhost:5000
+    * Run the `C#` app at http://localhost:5001
 
 # Running the profiling tests
 
@@ -23,3 +23,6 @@
 <br/>`bombardier -c 1000 -n 100000 -l http://localhost:5000/test/json/simple` - Get a simple JSON object
 <br/>`bombardier -c 1000 -n 100000 -l http://localhost:5000/test/json/complex` - Get a complex JSON object
 <br/>`bombardier -c 100 -n 10000 -l --method=PUT --body-file=./test-person.json --header="Content-Type: application/json" http://localhost:5000/person` - Save a person to the db
+
+<br/>Testing http://localhost:5000 will test against the `go` application.
+<br/>Testing http://localhost:5001 will test against the `C#` application.
