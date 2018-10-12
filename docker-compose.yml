@@ -30,7 +30,7 @@ services:
         - "8080:80"
 
   goapp:
-    build: .        
+    build: ./src/go
     container_name: goapp-profiling
     expose: 
         - "5000"
