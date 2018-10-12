@@ -6,6 +6,7 @@
 1. Open a command prompt and run `docker-compose up`.  This will:
     * Download and run PostgreSQL
         * Setup a default database with some tables inside Postgres
+        * Insert some default data
     * Download and run pgadmin
     * Run the go app at http://localhost:5000
 
