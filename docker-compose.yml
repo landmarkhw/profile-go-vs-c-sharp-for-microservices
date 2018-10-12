@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  profile-postgres:
+    build: .
+    container_name: profile-postgres
+    environment:    
+        - POSTGRES_PASSWORD=profile-test
+        - POSTGRES_USER=profiler
+        - POSTGRES_DB=test
+    expose:
+        - "5432"
+    image: postgres
+    ports:
+        - "5432:5432"
+
+  pgadmin:
+    container_name: pgadmin
+    environment:
+        - PGADMIN_DEFAULT_EMAIL=dougrday@gmail.com
+        - PGADMIN_DEFAULT_PASSWORD=test
+    expose:
+        - "8080"
+    image: dpage/pgadmin4
+    links: 
+        - profile-postgres
+    ports:
+        - "8080:80"
+
+# To run: docker-compose up -d

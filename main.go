@@ -1,7 +1,7 @@
 package main
 
 import (
-	"landmarkhw.com/engine"
+	"github.com/landmarkhw/profile-go-vs-c-sharp-for-microservices/engine"
 )
 
 func main() {
