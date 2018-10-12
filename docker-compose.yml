@@ -2,7 +2,9 @@ version: "3"
 
 services:
   profile-postgres:
-    build: .
+    build: 
+        context: .
+        dockerfile: dockerfile-postgres
     container_name: profile-postgres
     environment:    
         - POSTGRES_PASSWORD=profile-test
@@ -26,5 +28,15 @@ services:
         - profile-postgres
     ports:
         - "8080:80"
+
+  goapp:
+    build: .        
+    container_name: goapp-profiling
+    expose: 
+        - "5000"
+    links:
+        - profile-postgres
+    ports:
+        - "5000:5000"
 
 # To run: docker-compose up -d

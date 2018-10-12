@@ -1,5 +1,14 @@
-FROM postgres
+FROM golang:latest
+WORKDIR /app/src/github.com/landmarkhw/profile-go-vs-c-sharp-for-microservices
+ENV GOPATH=/app
 
-# Copy scripts to the container - these will be run automatically
-# by the postgres image
-COPY ./scripts /docker-entrypoint-initdb.d/
+# Copy files to the container
+COPY ./ ./
+
+# Restore dependencies
+RUN go get ./...
+# Build the app
+RUN go build -o main
+
+# Run the app
+CMD ./main

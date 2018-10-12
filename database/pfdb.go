@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	host     = "localhost"
+	host     = "profile-postgres"
 	port     = 5432
 	user     = "profiler"
 	password = "profile-test"
