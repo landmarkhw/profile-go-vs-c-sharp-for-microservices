@@ -7,7 +7,8 @@
     * Download and run PostgreSQL
         * Setup a default database with some tables inside Postgres
         * Insert some default data
-    * Download and run pgadmin
+    * Download and run pgadmin at http://localhost:8080
+        * You can connect using `profile-postgres` as the hostname, `profiler` as the username, `profile-test` as the password.
     * Run the go app at http://localhost:5000
 
 # Running the profiling tests
