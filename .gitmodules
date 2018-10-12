@@ -1,3 +1,6 @@
 [submodule "profile-go-microservice"]
 	path = profile-go-microservice
 	url = https://github.com/landmarkhw/profile-go-microservice.git
+[submodule "profile-c-sharp-microservice"]
+	path = profile-c-sharp-microservice
+	url = https://github.com/landmarkhw/profile-c-sharp-microservice.git

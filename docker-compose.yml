@@ -39,4 +39,14 @@ services:
     ports:
         - "5000:5000"
 
+  csharpapp:
+    build: ./profile-c-sharp-microservice
+    container_name: csharpapp-profiling
+    expose:
+        - "5001"
+    links:
+        - profile-postgres
+    ports:
+        - "5001:80"
+
 # To run: docker-compose up -d
