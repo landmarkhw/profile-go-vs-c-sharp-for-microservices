@@ -16,19 +16,6 @@ services:
     ports:
         - "5432:5432"
 
-  pgadmin:
-    container_name: pgadmin
-    environment:
-        - PGADMIN_DEFAULT_EMAIL=dougrday@gmail.com
-        - PGADMIN_DEFAULT_PASSWORD=test
-    expose:
-        - "8080"
-    image: dpage/pgadmin4
-    links: 
-        - profile-postgres
-    ports:
-        - "8080:80"
-
   goapp:
     build: ./profile-go-microservice
     container_name: goapp-profiling
